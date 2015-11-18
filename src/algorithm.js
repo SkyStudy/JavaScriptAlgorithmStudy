@@ -5,5 +5,12 @@ var Algorithm = {
             result *= i;
         }
         return result;
+    },
+
+    isPrimeNumber: function (number) {
+        /**
+         * TODO: Решето Ератосфена wikipedia
+         */
     }
+
 };
