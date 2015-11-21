@@ -8,23 +8,24 @@ var Algorithm = {
     },
 
     isPrimeNumber: function (number) {
-        var data = {
-            1: true
-        };
+        if (number === 1) return true;
 
-        for (var k = 2; k <= number; ++k) {
-            data[k] = true;
+        var data = {};
+
+        for (var index = 2; index <= number; ++index) {
+            data[index] = true;
         }
 
-        for (var i = 2, limit = Math.sqrt(number); i <= limit; ++i) {
+        for (var i = 2, maxDelimeter = Math.sqrt(number); i <= maxDelimeter; ++i) {
             if (data[i]) {
                 for (var j = 2 * i; j <= number; j = j + i) {
+                    if (j === number) return false;
                     data[j] = false;
                 }
             }
         }
 
-        return data[number];
+        return true;
     }
 
 };
