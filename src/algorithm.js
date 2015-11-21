@@ -8,9 +8,11 @@ var Algorithm = {
     },
 
     isPrimeNumber: function (number) {
-        /**
-         * TODO: Решето Ератосфена wikipedia
-         */
+        if (number <= 3) return true;
+
+        if (number % 2 === 0) return false;
+
+        return true;
     }
 
 };
