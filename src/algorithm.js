@@ -26,6 +26,10 @@ var Algorithm = {
         }
 
         return true;
+    },
+
+    getSequenceSum: function (multipliers, x) {
+
     }
 
 };
