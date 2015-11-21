@@ -8,11 +8,23 @@ var Algorithm = {
     },
 
     isPrimeNumber: function (number) {
-        if (number <= 3) return true;
+        var data = {
+            1: true
+        };
 
-        if (number % 2 === 0) return false;
+        for (var k = 2; k <= number; ++k) {
+            data[k] = true;
+        }
 
-        return true;
+        for (var i = 2, limit = Math.sqrt(number); i <= limit; ++i) {
+            if (data[i]) {
+                for (var j = 2 * i; j <= number; j = j + i) {
+                    data[j] = false;
+                }
+            }
+        }
+
+        return data[number];
     }
 
 };
