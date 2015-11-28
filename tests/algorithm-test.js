@@ -12,3 +12,8 @@ QUnit.test("is prime number", function( assert ) {
     assert.equal(Algorithm.isPrimeNumber(4), false);
     assert.equal(Algorithm.isPrimeNumber(5), true);
 });
+
+QUnit.test("get sequence sum", function (assert) {
+    assert.equal(Algorithm.getSequenceSum([1, 2, 3], 1), 6);
+    assert.equal(Algorithm.getSequenceSum([1, 2, 3], 2), 11);
+});
